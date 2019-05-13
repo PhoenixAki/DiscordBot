@@ -83,7 +83,7 @@ public class BankCommand extends AbstractCommand {
     public String execute(DiscordBot bot, String[] args, MessageChannel channel, User author, Message inputMessage) {
         OBank bank = CBanks.findBy(author.getIdLong());
         if (args.length == 0) {
-            return String.format("Your current balance is `%s` %s \nYour salary is '%s' %s", bank.currentBalance, BotConfig.ECONOMY_CURRENCY_ICON, bank.currentBalance, BotConfig.ECONOMY_CURRENCY_ICON);
+            return String.format("Your current balance is `%s` %s \nYour salary is `%s` %s", bank.currentBalance, BotConfig.ECONOMY_CURRENCY_ICON, bank.currentBalance, BotConfig.ECONOMY_CURRENCY_ICON);
         }
         switch (args[0].toLowerCase()) {
             case "send":
@@ -133,7 +133,7 @@ public class BankCommand extends AbstractCommand {
                 targetChannel.sendMessage(message).queueAfter(10,TimeUnit.MINUTES);
 
 
-            case "setSalary":
+            case "setsalary":
                 if(args.length != 3){
                     return Templates.invalid_use.formatGuild(channel);
                 }
