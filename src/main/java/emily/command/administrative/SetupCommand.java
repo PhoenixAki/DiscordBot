@@ -55,8 +55,8 @@ public class SetupCommand extends AbstractCommand {
     @Override
     public String[] getUsage() {
         return new String[]{
-                "setup guild              //guided setup of guild-specific settings.",
-                "setup bot                //guided setup of core bot settings."
+                "setup                    //guided setup of guild-specific settings.",
+                "setup test               //list all settings to test if they are being properly updated."
         };
     }
 
