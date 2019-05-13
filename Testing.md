@@ -35,3 +35,5 @@
 **Good Case** - `setup` followed by *good case for setting 1* followed by `yes` or `no`
 
 **Bad Case** - `setup` followed by *good case for setting 1* followed by `as;ldkfj;asldkfj;asdj`
+
+*Additionally, after running `!setup`, you can run `!setup test` to get a list of settings, to visually see that they were changed.*
