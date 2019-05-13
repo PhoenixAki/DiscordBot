@@ -127,6 +127,8 @@ public final class Templates {
     public static final Template no_permission = new Template();
     public static final Template invalid_use = new Template();
     public static final Template not_implemented_yet = new Template();
+    public static final Template invalid_salary = new Template(TemplateArgument.ARG, TemplateArgument.ARG2);
+    public static final Template salary_set_success = new Template(TemplateArgument.ARG, TemplateArgument.ARG2, TemplateArgument.ARG3);
     public static final Template TEST = new Template(
             new TemplateArgument[]{TemplateArgument.USER, TemplateArgument.USER_DESCRIMINATOR, TemplateArgument.GUILD},
             new TemplateArgument[]{TemplateArgument.ARG, TemplateArgument.ARGS});
@@ -192,6 +194,7 @@ public final class Templates {
         public static final Template case_not_found = new Template(TemplateArgument.ARG);
         public static final Template emojify_max_exceeded = new Template(TemplateArgument.ARG);
         public static final Template case_reason_modified = new Template();
+        public static final Template salary_payout_failed = new Template();
 
         public static final Template reminder_sent_success = new Template();         //added for !remind command
         public static final Template reminder_failed_check_command_statement = new Template();  //added for !remind command

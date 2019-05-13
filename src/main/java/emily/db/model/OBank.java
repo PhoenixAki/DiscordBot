@@ -19,8 +19,11 @@ package emily.db.model;
 import emily.db.AbstractModel;
 import emily.db.controllers.CBankTransactions;
 import emily.db.controllers.CBanks;
+import net.dv8tion.jda.core.entities.*;
+
 
 import java.sql.Timestamp;
+import java.util.concurrent.TimeUnit;
 
 /**
  * Created on 5-9-2016
@@ -30,6 +33,7 @@ public class OBank extends AbstractModel {
     public int id = 0;
     public long currentBalance = 0L;
     public Timestamp createdOn = null;
+    public long salary = 0L;
 
     public boolean transferTo(OBank target, int amount, String description) {
         if (id == 0) {
@@ -49,6 +53,23 @@ public class OBank extends AbstractModel {
         currentBalance -= amount;
         CBanks.updateBalance(id, -amount);
         CBanks.updateBalance(target.id, amount);
+        return true;
+    }
+
+    public void setSalary(OBank target, long salary){
+        target.salary = salary;
+        //CBanks.updateSalary(id, salary);
+    }
+
+    public boolean collectSalary(OBank user, long amount, TextChannel targetChannel, Guild currGuild){
+        try{
+            TimeUnit.SECONDS.sleep(10);
+
+            String message = "Salary added to balance.";
+            targetChannel.sendMessage(message).queueAfter(10, TimeUnit.SECONDS);
+        } catch (Exception e){
+            return false;
+        }
         return true;
     }
 }
