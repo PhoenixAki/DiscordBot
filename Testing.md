@@ -37,3 +37,10 @@
 **Bad Case** - `setup` followed by *good case for setting 1* followed by `as;ldkfj;asldkfj;asdj`
 
 *Additionally, after running `!setup`, you can run `!setup test` to get a list of settings, to visually see that they were changed.*
+
+## PlaylistCommand.java (Dan)
+In order to test the refactoring of this method:
+*First, run `!playlist help` to see all playlist commands*
+*From here you can view and test all necesarry commands*
+*You will need to also run `!play <youtube_link>` in order to add songs to playlists*
+*Ex. while the song is running, use the command `!playlist add` to add the song to the current playlist*
